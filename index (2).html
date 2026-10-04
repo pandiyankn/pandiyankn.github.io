@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pandiyan KN | Cloud Engineer Portfolio</title>
+<meta name="description" content="Pandiyan KN, cloud engineer fresher focused on AWS, Linux and DevOps.">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#080d1c;--s:#0f1730;--ink:#e9eefb;--mut:#9aa8c7;--line:#1f2b4d;--ac:#5cc8ff;--ac2:#9a8bff;--ok:#4fd1a0;--okb:#12382d;--glow:rgba(92,200,255,.16)}
+@media(prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f3f6fc;--s:#fff;--ink:#0d1a33;--mut:#53627f;--line:#d8e0ee;--ac:#1566d6;--ac2:#6a4ee0;--ok:#12805c;--okb:#dff5ec;--glow:rgba(21,102,214,.12)}}
+:root[data-theme="light"]{--bg:#f3f6fc;--s:#fff;--ink:#0d1a33;--mut:#53627f;--line:#d8e0ee;--ac:#1566d6;--ac2:#6a4ee0;--ok:#12805c;--okb:#dff5ec;--glow:rgba(21,102,214,.12)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before,body::after{content:"";position:fixed;z-index:-1;width:60vmax;height:60vmax;border-radius:50%;filter:blur(90px);opacity:.28;pointer-events:none}
+body::before{background:var(--ac);top:-30vmax;left:-20vmax}body::after{background:var(--ac2);bottom:-35vmax;right:-20vmax}
+a{color:inherit}:focus-visible{outline:3px solid var(--ac);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--ac),var(--ac2));z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 80%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-weight:700;text-decoration:none}.logo i{font-style:normal;color:var(--ac)}
+.links{display:flex;gap:20px;align-items:center;font-size:15px}.links a{text-decoration:none;color:var(--mut)}.links a:hover{color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--s);color:var(--ink);border-radius:999px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}
+@media(max-width:760px){.links a.h{display:none}}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding:70px 0 56px}
+@media(max-width:920px){.hero{grid-template-columns:1fr;padding:44px 0 36px}}
+.hi{color:var(--mut);margin:0 0 6px}
+h1{font-size:clamp(2.8rem,7vw,4.8rem);line-height:1;margin:0 0 14px;letter-spacing:-2px;background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font:600 1.3rem/1.4 ui-monospace,Consolas,Menlo,monospace;min-height:1.9em;margin:0 0 14px}.role::after{content:"▍";color:var(--ac);animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{color:var(--mut);font-size:1.1rem;max-width:34em;margin:0 0 26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--s)}
+.btn.p{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06101f;border:0}
+.facts{display:flex;flex-wrap:wrap;gap:6px 24px;margin:26px 0 0;padding:0;list-style:none;color:var(--mut);font-size:15px}.facts b{color:var(--ink)}
+.term{background:#050914;border:1px solid var(--line);border-radius:14px;overflow:hidden;font:13.5px/1.55 ui-monospace,Consolas,Menlo,monospace;color:#d6e2ff;box-shadow:0 20px 60px var(--glow)}
+.th{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid #18244a;color:#7d8db3}.th i{width:11px;height:11px;border-radius:50%;background:#f0605a}.th i+i{background:#f2bf3f}.th i+i+i{background:#3fc86a}.th span{margin-left:8px}
+#to{height:250px;overflow-y:auto;padding:12px 14px;white-space:pre-wrap;overflow-wrap:anywhere}
+#to .c{color:var(--ac)}#to .e{color:#f08b85}
+.ti{display:flex;gap:8px;align-items:center;padding:8px 14px;border-top:1px solid #18244a}.ti b{color:var(--ok)}
+.ti input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:inherit}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 12px}.chips button{background:#0e1634;color:#9fb4e8;border:1px solid #1d2b57;border-radius:999px;padding:3px 11px;font:inherit;font-size:12.5px;cursor:pointer}.chips button:hover{border-color:var(--ac);color:#fff}
+section{padding:58px 0;border-top:1px solid var(--line)}
+h2{font-size:1.9rem;margin:0 0 8px;letter-spacing:-.5px}.sub{color:var(--mut);margin:0 0 30px;max-width:42em}
+.card{position:relative;background:var(--s);border:1px solid var(--line);border-radius:16px;padding:26px;overflow:hidden;transition:transform .25s,border-color .25s}
+.card::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;background:radial-gradient(300px circle at var(--x,50%) var(--y,50%),var(--glow),transparent 65%)}
+.card:hover{transform:translateY(-3px);border-color:var(--ac)}.card:hover::after{opacity:1}
+.pr{margin-bottom:20px}.pr h3{margin:0 0 6px;font-size:1.3rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px;padding:0;list-style:none}.tags li{border:1px solid var(--line);border-radius:999px;padding:2px 12px;font-size:13.5px;color:var(--mut)}
+.pr ul.pts{margin:0 0 14px;padding-left:20px}.pr li{margin-bottom:5px}
+.learn{margin:0 0 14px;padding:10px 14px;border-left:3px solid var(--ac);background:var(--bg);border-radius:0 10px 10px 0;color:var(--mut);font-size:15.5px}.learn b{color:var(--ink)}
+.lk{font-weight:600;color:var(--ac)}
+.game{max-width:680px}.gh{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;margin-bottom:16px;font:14.5px ui-monospace,Consolas,Menlo,monospace}.gh b{color:var(--ac)}
+.gm{display:grid;grid-template-columns:76px 1fr auto;gap:12px;align-items:center;margin-bottom:12px}.gm span{font-weight:600;font-size:15px}
+.tr{height:12px;border-radius:99px;background:var(--line);overflow:hidden}.gf{height:100%;width:0;border-radius:99px;background:var(--ac);transition:width .2s linear,background .2s}.gf.m{background:#e0a21f}.gf.x{background:#d6453d}
+.gm button,.gs{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:9px;padding:7px 12px;font:inherit;font-size:14px;cursor:pointer}.gm button:hover:not(:disabled){border-color:var(--ac)}.gm button:disabled{opacity:.45;cursor:default}
+.gs{background:linear-gradient(90deg,var(--ac),var(--ac2));color:#06101f;border:0;font-weight:600;margin-top:6px}.gmsg{margin:12px 0 0;color:var(--mut);font-size:15.5px;min-height:3em}
+@media(max-width:520px){.gm{grid-template-columns:64px 1fr}.gm button{grid-column:1/-1}}
+.tl{position:relative;margin:0;padding:0 0 0 26px;list-style:none;border-left:2px solid var(--line)}
+.tl li{position:relative;margin-bottom:16px;padding:18px 20px}.tl li::before{content:"";position:absolute;left:-36px;top:24px;width:14px;height:14px;border-radius:50%;background:var(--ac);border:3px solid var(--bg);z-index:2}.tl li.now::before{background:var(--ok)}
+.tl time{color:var(--ac);font-weight:600;font-size:14.5px}.tl h3{margin:2px 0 4px;font-size:1.05rem}.tl p{margin:0 0 6px;color:var(--mut);font-size:15px}.tl a{font-weight:600;color:var(--ac);font-size:15px}
+.tag{margin-left:8px;padding:1px 10px;border-radius:999px;background:var(--okb);color:var(--ok);font-size:13px;font-weight:600}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.sk h3{margin:0 0 8px;font-size:1.05rem}.sk p{margin:0;color:var(--mut);font-size:15.5px}
+.ed{display:grid;gap:14px;margin-top:30px}.ed div{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-left:3px solid var(--ac);padding-left:14px}.ed h3{margin:0;font-size:1.02rem}.ed p{margin:2px 0 0;color:var(--mut);font-size:15px}.ed time{color:var(--mut);font-size:15px}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.ct a{text-decoration:none;display:block;padding:18px 20px;overflow-wrap:anywhere}.ct small{display:block;color:var(--mut);font-size:14px}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--mut);font-size:14.5px}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.role::after{animation:none}.card:hover{transform:none}html{scroll-behavior:auto}}
+</style></head>
+<body>
+<div id="bar"></div>
+<header><div class="wrap"><nav aria-label="Main">
+<a class="logo" href="#top"><i>&gt;_</i> Pandiyan KN</a>
+<div class="links"><a class="h" href="#projects">Projects</a><a class="h" href="#play">Play</a><a class="h" href="#journey">Journey</a><a class="h" href="#skills">Skills</a><a href="#contact">Contact</a><button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme</button></div>
+</nav></div></header>
+<main id="top"><div class="wrap">
+<div class="hero">
+<div>
+<p class="hi">Hi, I'm</p><h1>Pandiyan KN</h1>
+<p class="role" id="role">Cloud Engineer</p>
+<p class="lead">A Computer Science graduate from Kovilpatti, Tamil Nadu. I work with AWS, Linux and Python, and I'm looking for an entry-level cloud engineer role.</p>
+<div class="cta"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="Pandiyan_KN_Cloud_Engineer_Resume.pdf" download>Download resume</a><a class="btn" href="https://github.com/pandiyankn" target="_blank" rel="noopener">GitHub</a></div>
+<ul class="facts"><li><b>B.E. CSE</b>, 2026</li><li><b>2</b> projects</li><li><b>4</b> certifications</li></ul>
+</div>
+<div class="term" aria-label="Interactive terminal">
+<div class="th"><i></i><i></i><i></i><span>pandiyan@portfolio: ~</span></div>
+<div id="to" aria-live="polite"></div>
+<div class="ti"><b>$</b><input id="ti" type="text" autocomplete="off" spellcheck="false" aria-label="Type a command" placeholder="type help and press Enter"></div>
+<div class="chips"><button data-c="help">help</button><button data-c="whoami">whoami</button><button data-c="skills">skills</button><button data-c="projects">projects</button><button data-c="play">play</button><button data-c="sudo hire-me">sudo hire-me</button></div>
+</div></div></div>
+
+<section id="projects"><div class="wrap"><h2>Projects</h2><p class="sub">One on keeping servers healthy, one on turning data into answers.</p>
+<article class="card pr rv"><h3>AWS Linux Server Monitoring and Automated Alert System</h3>
+<p>A Python application that watches a Linux server and reports whether it is healthy or needs attention.</p>
+<ul class="tags"><li>Python</li><li>Linux</li><li>AWS</li><li>psutil</li><li>Logging</li><li>Git and GitHub</li></ul>
+<ul class="pts"><li>Collects CPU, memory, disk and network usage with <code>psutil</code>.</li><li>Uses configurable thresholds to mark the server HEALTHY or WARNING.</li><li>Writes monitoring activity and warnings to logs for troubleshooting.</li><li>Designed for an AWS Linux EC2 instance, with CloudWatch monitoring and automated alerts planned next.</li></ul>
+<p class="learn"><b>What I learned:</b> turning raw metrics into a clear HEALTHY or WARNING signal, and why logging matters when you troubleshoot a server.</p>
+<a class="lk" href="https://github.com/pandiyankn/aws-linux-monitoring" target="_blank" rel="noopener">View on GitHub</a></article>
+<article class="card pr rv"><h3>Tamil Movie Rating Analysis System</h3>
+<p>A Python application that analyzes Tamil movie ratings, genres, release years and review counts.</p>
+<ul class="tags"><li>Python</li><li>NumPy</li><li>Pandas</li><li>Matplotlib</li><li>OOP</li><li>CSV</li></ul>
+<ul class="pts"><li>Calculates average, median, highest, lowest and standard deviation of ratings with NumPy.</li><li>Finds top and bottom rated movies, genre-wise ratings and releases per year with Pandas.</li><li>Lets you search movies and filter by minimum rating.</li><li>Draws charts for rating distribution, genre comparison and yearly releases.</li></ul>
+<p class="learn"><b>What I learned:</b> cleaning and grouping data with Pandas, summarising it with NumPy, and structuring a Python project with OOP.</p>
+<a class="lk" href="https://github.com/pandiyankn/Movie-Rating-Analysis-System-" target="_blank" rel="noopener">View on GitHub</a></article>
+</div></section>
+
+<section id="play"><div class="wrap"><h2>Play: keep the server healthy</h2><p class="sub">A small game based on my monitoring project. Metrics keep climbing, so fix them before any one hits 100%. Keys 1 to 4 also work.</p>
+<div class="card game rv">
+<div class="gh"><span>Uptime <b id="gs">0.0s</b></span><span>Best <b id="gb">0.0s</b></span><span>Status <b id="gt">READY</b></span></div>
+<div class="gm"><span>CPU</span><div class="tr"><div class="gf" id="g0"></div></div><button data-i="0" disabled>1. Kill process</button></div>
+<div class="gm"><span>Memory</span><div class="tr"><div class="gf" id="g1"></div></div><button data-i="1" disabled>2. Free memory</button></div>
+<div class="gm"><span>Disk</span><div class="tr"><div class="gf" id="g2"></div></div><button data-i="2" disabled>3. Clear logs</button></div>
+<div class="gm"><span>Network</span><div class="tr"><div class="gf" id="g3"></div></div><button data-i="3" disabled>4. Throttle traffic</button></div>
+<button class="gs" id="gstart">Start</button><p class="gmsg" id="gm" aria-live="polite"></p>
+</div></div></section>
+
+<section id="journey"><div class="wrap"><h2>Learning journey</h2><p class="sub">Certifications in the order I earned them, each with a link to verify it.</p>
+<ul class="tl">
+<li class="card rv"><time>Jul-Oct 2023</time><h3>Introduction To Internet Of Things</h3><p>NPTEL, 72% (Elite). Certificate ID NPTEL23CS83S846800122.</p><a href="https://nptel.ac.in/noc/E_Certificate/NPTEL23CS83S84680012220039237" target="_blank" rel="noopener">Verify certificate</a></li>
+<li class="card rv"><time>Jul-Oct 2024</time><h3>Introduction to Industry 4.0 and Industrial Internet of Things</h3><p>NPTEL, 64%. Certificate ID NPTEL24CS95S364800013.</p><a href="https://nptel.ac.in/noc/E_Certificate/NPTEL24CS95S36480001303826365" target="_blank" rel="noopener">Verify certificate</a></li>
+<li class="card rv"><time>Jan-Apr 2025</time><h3>Cloud Computing</h3><p>NPTEL, 64% (Elite). Certificate ID NPTEL25CS11S950000076.</p><a href="https://nptel.ac.in/noc/E_Certificate/NPTEL25CS11S95000007604221459" target="_blank" rel="noopener">Verify certificate</a></li>
+<li class="card rv now"><time>Aug 2026 to Feb 2027</time><span class="tag">In progress</span><h3>Cloud Computing</h3><p>Besant Technologies.</p></li>
+</ul></div></section>
+
+<section id="skills"><div class="wrap"><h2>Skills</h2><p class="sub">What I work with.</p>
+<div class="sk">
+<div class="card rv"><h3>Cloud</h3><p>AWS EC2, S3, IAM, VPC, subnets, security groups</p></div>
+<div class="card rv"><h3>Linux</h3><p>File and directory management, permissions, processes, packages, SSH, shell scripting basics</p></div>
+<div class="card rv"><h3>Python</h3><p>OOP, file handling, collections, psutil, NumPy, Pandas, Matplotlib</p></div>
+<div class="card rv"><h3>DevOps</h3><p>Git, GitHub, Docker, Jenkins, CI/CD basics</p></div>
+<div class="card rv"><h3>Networking</h3><p>TCP/IP, subnetting, DNS, DHCP, NAT, VLAN, static routing, OSPF, ACL</p></div>
+<div class="card rv"><h3>Tools</h3><p>AWS Management Console, Cisco Packet Tracer, VS Code</p></div></div>
+<div class="ed">
+<div><span><h3>B.E. in Computer Science Engineering</h3><p>National Engineering College, Anna University, Kovilpatti, Tamil Nadu | CGPA 6.34</p></span><time>May 2026</time></div>
+<div><span><h3>Class XII (HSC)</h3><p>Oxford Matriculation Higher Secondary School, Sivaganga, Tamil Nadu | 64.0%</p></span><time>May 2022</time></div>
+<div><span><h3>Class X (SSLC)</h3><p>Oxford Matriculation Higher Secondary School, Sivaganga, Tamil Nadu | 60.0%</p></span><time>May 2020</time></div></div>
+</div></section>
+
+<section id="contact"><div class="wrap"><h2>Let's talk</h2><p class="sub">I'm open to entry-level AWS and cloud engineer roles.</p>
+<div class="ct">
+<a class="card rv" href="mailto:pandiyank2004@gmail.com"><small>Email</small>pandiyank2004@gmail.com</a>
+<a class="card rv" href="tel:+919791446949"><small>Phone</small>+91 97914 46949</a>
+<a class="card rv" href="https://www.linkedin.com/in/pandiyan-kn-442545252/" target="_blank" rel="noopener"><small>LinkedIn</small>pandiyan-kn</a>
+<a class="card rv" href="https://github.com/pandiyankn" target="_blank" rel="noopener"><small>GitHub</small>pandiyankn</a></div>
+</div></section></main>
+<footer><div class="wrap">Pandiyan KN, Chennai, Tamil Nadu. Tip: try <b>sudo hire-me</b> in the terminal.</div></footer>
+<script>
+(function(){
+var R=document.documentElement,$=function(i){return document.getElementById(i)},RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+R.classList.add('js');
+try{var t0=localStorage.getItem('theme');if(t0)R.setAttribute('data-theme',t0)}catch(e){}
+$('theme').onclick=function(){var d=R.getAttribute('data-theme')==='dark'||(!R.getAttribute('data-theme')&&matchMedia('(prefers-color-scheme:dark)').matches),n=d?'light':'dark';R.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}};
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.1});els.forEach(function(e){io.observe(e)})}else els.forEach(function(e){e.classList.add('in')});
+addEventListener('scroll',function(){var m=R.scrollHeight-R.clientHeight;$('bar').style.width=(m>0?R.scrollTop/m*100:0)+'%'},{passive:true});
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')})});
+/* role typer */
+var roles=['Cloud Engineer','AWS | Linux | Python','DevOps learner','Server monitoring builder'],ri=0,ci=0,del=false,rl=$('role');
+if(RM){rl.textContent=roles[0]}else{(function ty(){var w=roles[ri];ci+=del?-1:1;rl.textContent=w.slice(0,ci);var s=del?35:70;if(!del&&ci===w.length){del=true;s=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;s=300}setTimeout(ty,s)})()}
+/* terminal */
+var to=$('to'),ti=$('ti');
+var C={help:'Commands: whoami, skills, projects, certs, education, contact, resume, play, clear',
+whoami:'Pandiyan KN, cloud engineer fresher.\nB.E. CSE 2026. AWS, Linux, Python.',
+skills:'AWS: EC2, S3, IAM, VPC\nLinux: permissions, SSH, shell basics\nPython: psutil, NumPy, Pandas, Matplotlib\nDevOps: Git, GitHub, Docker, Jenkins\nNetworking: CCNA concepts',
+projects:'1. AWS Linux Server Monitoring and Automated Alert System\n2. Tamil Movie Rating Analysis System',
+certs:'NPTEL: IoT (2023), Industry 4.0 and IIoT (2024), Cloud Computing (2025)\nBesant: Cloud Computing (in progress)',
+education:'B.E. CSE, National Engineering College, Kovilpatti (2026)',
+contact:'pandiyank2004@gmail.com | +91 97914 46949','sudo hire-me':'[sudo] permission granted.\nExcellent choice. Email pandiyank2004@gmail.com to start the process.'};
+function out(h,c){var d=document.createElement('div');if(c)d.className=c;d.textContent=h;to.appendChild(d);to.scrollTop=to.scrollHeight}
+function run(c){c=c.trim().toLowerCase();if(!c)return;out('$ '+c,'c');
+if(c==='clear'){to.textContent='';return}
+if(c==='play'){out('Starting the game...');$('play').scrollIntoView({behavior:RM?'auto':'smooth'});return}
+if(c==='resume'){out('Opening resume...');open('Pandiyan_KN_Cloud_Engineer_Resume.pdf','_blank');return}
+if(C[c]){out(C[c]);return}out('command not found: '+c+'. Type help.','e')}
+ti.addEventListener('keydown',function(e){if(e.key==='Enter'){run(ti.value);ti.value=''}});
+document.querySelectorAll('.chips button').forEach(function(b){b.onclick=function(){run(b.dataset.c)}});
+out('Welcome. Type a command or tap a chip below.');run('whoami');
+/* game */
+var v=[20,20,20,20],on=false,t=0,tm,best=0,gb=document.querySelectorAll('.gm button');
+try{best=parseFloat(localStorage.getItem('gbest'))||0}catch(e){}
+function paint(){v.forEach(function(x,i){var f=$('g'+i);f.style.width=Math.min(x,100)+'%';f.className='gf'+(x>=85?' x':x>=65?' m':'')});$('gs').textContent=t.toFixed(1)+'s';$('gb').textContent=best.toFixed(1)+'s';if(on)$('gt').textContent=v.some(function(x){return x>=65})?'WARNING':'HEALTHY'}
+function fix(i){if(!on)return;v[i]=Math.max(0,v[i]-32);paint()}
+function end(){on=false;clearInterval(tm);$('gt').textContent='CRASHED';gb.forEach(function(b){b.disabled=true});if(t>best){best=t;try{localStorage.setItem('gbest',String(t))}catch(e){}}$('gm').textContent='Server crashed after '+t.toFixed(1)+' seconds. In real life, thresholds and alerts catch this early, which is what my monitoring project does.';$('gstart').textContent='Play again';paint()}
+function tick(){t+=.25;var d=1+t/25;v[Math.floor(Math.random()*4)]+=(2+Math.random()*6)*d;for(var i=0;i<4;i++)v[i]+=.25*d;paint();if(v.some(function(x){return x>=100}))end()}
+$('gstart').onclick=function(){v=[20,20,20,20];t=0;on=true;$('gm').textContent='';$('gt').textContent='HEALTHY';gb.forEach(function(b){b.disabled=false});this.textContent='Restart';clearInterval(tm);tm=setInterval(tick,250);paint()};
+gb.forEach(function(b){b.onclick=function(){fix(+b.dataset.i)}});
+addEventListener('keydown',function(e){if(on&&e.target!==ti&&'1234'.indexOf(e.key)>-1&&e.key.length===1)fix(+e.key-1)});
+paint();
+})();
+</script>
+</body></html>
